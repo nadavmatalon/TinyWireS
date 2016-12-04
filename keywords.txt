@@ -1,0 +1,37 @@
+#######################################
+# Syntax Coloring Map For TinyWireS
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TinyWireS	KEYWORD1
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+write	KEYWORD2
+read	KEYWORD2
+available	KEYWORD2
+onRequest	KEYWORD2
+onReceive	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+#	LITERAL1
+
+
+#######################################
+# Built-In Variables (LITERAL2)
+#######################################
+
+#	LITERAL2
