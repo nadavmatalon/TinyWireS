@@ -1,21 +1,12 @@
-/*==============================================================================================================*
- 
-    @file     TinyWireS.cpp
-
- *==============================================================================================================*/
-
-#if 1
-__asm volatile ("nop");
-#endif
 
 extern "C" {
     #include <inttypes.h>
-    #include "USI_TWI_Slave.h"
     #include <avr/interrupt.h>
+    #include "utility/USI_TWI_Slave.h"
 }
 
-#include "TinyWireS.h"
 #include "Arduino.h"
+#include "TinyWireS.h"
 
 USI_TWI_S::USI_TWI_S() {}
 
