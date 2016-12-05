@@ -8,7 +8,7 @@
 
 ## INTRODUCTION
 
-This library enables members of the ATtiny family to become Slaves on an I2C Bus. The library is based on a hardware implementation of I2C which is faster than the software one, but requriesusing a specific set of pins for SDA (PA6 on ATtiny84A) & SCL (PA4 on ATtiny84A).
+This library enables members of the ATtiny family to become Slaves on an I2C Bus. The library is based on a hardware implementation of I2C which is faster than the software one, but requries using a specific set of pins for SDA (PA6 on ATtiny84A) & SCL (PA4 on ATtiny84A).
 
 ## REPOSITORY CONTENTS
 
