@@ -1,38 +1,31 @@
 /*
     TinyWireS Library: ATtiny84A-Side (Slave)
-    ------------------------------------------
+    -----------------------------------------
 
     INTRODUCTION
     ------------
-
     The following sketch provides a simple example of setting up an ATtiny84A as an I2C Slave device
     on the I2C bus and an Arduino Uno as the I2C Master.
 
     At runtime, the Arduino Master will request 4 bytes from the ATtiny84A Slave and then print them
     out using the Serial Monitor.
 
-
     HW SETUP
     --------
-
     - Connect Arduino Pin A4 (HW SDA) to ATtiny84A Pin PA6 (SW SDA) with a 2K2 pull-up resistor to 5V
     - Connect Arduino Pin A5 (HW SCL) to ATtiny84A Pin PA4 (SW SCL) with a 2K2 pull-up resistor to 5V
     - Follow the basic hookup for Arduino & ATtiny84A (Common ground for both ICs, 100nF decoupling capacitors,
       10K pullup resistors for RESET pins, and if needed, external crystals)
 
-
     RUNNING THE SKETCH
     ------------------
-
     Upload this sketch to the ATtiny84A and the other example sketch (Arduino_Uno_Master.ino) to the
     Arduino. Then open the Serial Monitor (make sure the Baud Rate is set to 9600).
-
 
     BUG REPORTS
     -----------
     Please report any bugs/issues/suggestions at the GITHUB Repository of this library at:
     https://github.com/nadavmatalon/TinyWireS
-
 
     LICENSE
     -------
@@ -55,8 +48,17 @@
     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+#define __AVR_ATtiny84__
+
 #include <Arduino.h>
-#include "TinyWireS.h"
+
+#if defined(__AVR_ATtiny841__)
+#define F_CPU 16000000                          // clock speed: 16MHz (external crystal)
+#include "WireS.h"                              // I2C library for ATtiny841 (and other modern ATtinys)
+#else
+#define F_CPU 20000000                          // clock speed: 20MHz (external crystal)
+#include "TinyWireS.h"                          // I2C library for ATtiny84A (and other older ATtinys)
+#endif
 
 const byte SLAVE_ADDR = 100;
 

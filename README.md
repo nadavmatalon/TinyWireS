@@ -8,7 +8,7 @@
 
 ## INTRODUCTION
 
-This library enables members of the ATtiny family to become Slaves on an I2C Bus. The library is based on a hardware implementation of I2C which is faster than the software one, but requriesusing a specific set of pins for SDA (PA6) & SCL (PA4).
+This library enables members of the ATtiny family to become Slaves on an I2C Bus. The library is based on a hardware implementation of I2C which is faster than the software one, but requriesusing a specific set of pins for SDA (PA6 on ATtiny84A) & SCL (PA4 on ATtiny84A).
 
 ## REPOSITORY CONTENTS
 
@@ -19,10 +19,10 @@ This library enables members of the ATtiny family to become Slaves on an I2C Bus
     - **USI_TWI_Slave.c** - C\# file with relevant TWI-USI functions.
 - **/examples**  
     - **/TinyWireS_Example**
-        - **/ATtiny84A_Master**
+        - **/ATtiny84A_Slave**
             - **ATtiny84A_Slave.ino** - Slave-Side: A basic sketch implementing the ATtiny84A as an I2C Slave and Arduino Uno as the I2C Master  
         - **Arduino_Uno_Master** 
-            - **Arduino_Uno_Slave.ino** - Master-Side: A basic sketch implementing the ATtiny84A as an I2C Slave and Arduino Uno as the I2C Master  
+            - **Arduino_Uno_Master.ino** - Master-Side: A basic sketch implementing the ATtiny84A as an I2C Slave and Arduino Uno as the I2C Master  
 - **/extras** 
     - **License.txt** - A copy of the end-user license agreement.  
 - **keywords.txt** - Keywords for this library which will be highlighted in sketches within the Arduino IDE. 
