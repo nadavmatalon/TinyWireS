@@ -35,7 +35,8 @@
 #include <avr/interrupt.h>
 #include "USI_TWI_Slave.h"
 
-#if defined(__AVR_ATtiny2313__)
+#if defined(__AVR_ATtiny2313__) |               \
+    defined(__AVR_ATtiny2313A__)
 #  define DDR_USI             DDRB
 #  define PORT_USI            PORTB
 #  define PIN_USI             PINB
@@ -193,7 +194,6 @@ bool usiTwiDataInTransmitBuffer(void) {
 }
 
 void usiTwiTransmitByte(uint8_t data) {
-    uint8_t tmphead;
     while (txCount == TWI_TX_BUFFER_SIZE);
     txBuf[txHead] = data;
     txHead = (txHead + 1) & TWI_TX_BUFFER_MASK;
