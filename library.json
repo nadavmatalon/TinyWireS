@@ -6,9 +6,10 @@
 		"keywords": "I2C, WIRE, ATtiny, USI",
 		"description": "ATtiny I2C Slave Library",
 		"downloadUrl": "https://github.com/nadavmatalon/TinyWireS/archive/master.zip",
-		"maintainers":
+		"authors":
 		{
 		        "name": "Nadav Matalon",
+			"maintainer": true
 		},
 		"repository":
 		{
